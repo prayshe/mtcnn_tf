@@ -116,7 +116,6 @@ def gen_tfrecords(net, shuffling=False):
                     sys.stdout.flush()
                 filename = image_example['filename']
                 __add_to_tfrecord(filename, image_example, tfrecord_writer)
-        tfrecord_writer.close()
         print('\n')
     saveFolder = os.path.join(rootPath, "tmp/data/%s/"%(net))
     #tfrecord name 
